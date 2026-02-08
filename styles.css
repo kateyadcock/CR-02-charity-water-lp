@@ -44,8 +44,10 @@ body {
   background-color: var(--cw-brown);
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -72,17 +74,17 @@ body {
 
 /* Text Content */
 .hero-content h1 {
-  font-size: 44px;
+  font-size: 56px;
   color: var(--cw-yellow);
-  margin-bottom: auto;
-  line-height: 1.1;
+  margin-bottom: 28;
+  line-height: 1.05;
 }
 
 .hero-content p {
   font-size: 16px;
   max-width: 500px;
   line-height: 1.6;
-  margin-bottom: auto;
+  margin-bottom: 28px;
   color: #ffffff;
 }
 
@@ -115,7 +117,7 @@ body {
 /* Image Card */
 .hero-image {
   border: 6px solid var(--cw-yellow);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   max-width: 340px;
 }
@@ -135,7 +137,10 @@ body {
   }
 
   .hero-content {
-    max-width: 50%;
+      display: flex;
+  flex-direction: column;
+  justify-content: center;  
+    max-width: 100%;
   }
 
   .hero-image {
@@ -148,3 +153,32 @@ button:hover {
   transform: scale(1.03);
   transition: 0.2s ease;
 }
+button:focus {
+  outline: 2px solid var(--cw-yellow);
+  outline-offset: 2px;
+}
+.cta-bar-hero {
+    margin-top: 12px;
+  background-color: var(--cw-cream);
+  padding: 10px 12px;
+  border-radius: 20px;         
+  display: inline-flex;
+ justify-content: space-between; 
+  gap: 10px;
+}
+
+.primary-label {
+  color: #cfcfcf;               
+  font-weight: 600;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.cta-bar-hero .primary-btn {
+  background-color: var(--cw-brown);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+} 
