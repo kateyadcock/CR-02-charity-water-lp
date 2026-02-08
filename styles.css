@@ -1,14 +1,25 @@
+/* Brand Colors */
+:root {
+  --cw-yellow: #FFC907;
+  --cw-navy: #003366;
+  --cw-blue: #77A8BB;
+  --cw-cream: #FFF7E1;
+  --cw-black: #1A1A1A;
+  --cw-brown: #BF6C46;
+  --cw-gray: #CBCDC1;
+}
+
 /* Basic Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Proxima Nova", "Avenir", "Avenir Next", Helvetica, Arial, sans-serif;
 }
 
 body {
-  background-color: #f8f4e8;
-  color: #ffffff;
+  background-color: var(--cw-cream);
+  color: var(--cw-black);
 }
 
 /* Header */
@@ -17,19 +28,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  background-color: #f8f4e8;
+  background-color: var(--cw-cream);
 }
 
 .logo {
   font-size: 22px;
-  font-weight: bold;
-  color: #1f1f1f;
-  border: 2px solid #f9c846;
+  font-weight: 700;
+  color: var(--cw-black);
+  border: 2px solid var(--cw-yellow);
   padding: 6px 12px;
 }
 
 .donate-btn {
-  background-color: #c97a4a;
+  background-color: var(--cw-brown);
   color: white;
   border: none;
   padding: 10px 18px;
@@ -39,25 +50,32 @@ body {
 
 /* Hero Section */
 .hero {
+  background-color: var(--cw-navy);
+  padding: 60px 24px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 40px 24px;
-  background-color: #0b3a67;
 }
 
 /* Text Content */
 .hero-content h1 {
-  font-size: 36px;
-  color: #f9c846;
+  font-size: 44px;
+  color: var(--cw-yellow);
   margin-bottom: 16px;
+  line-height: 1.1;
 }
 
 .hero-content p {
   font-size: 16px;
   max-width: 500px;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 24px;
+  color: #ffffff;
 }
 
 /* Buttons */
@@ -69,29 +87,29 @@ body {
 
 .primary-btn {
   background-color: #ffffff;
-  color: #0b3a67;
+  color: var(--cw-navy);
   border: none;
   padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .secondary-btn {
-  background-color: #c97a4a;
+  background-color: var(--cw-brown);
   color: white;
   border: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 /* Image Card */
 .hero-image {
-  border: 6px solid #f9c846;
-  border-radius: 6px;
+  border: 6px solid var(--cw-yellow);
+  border-radius: 4px;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .hero-image img {
@@ -102,7 +120,7 @@ body {
 
 /* Desktop Layout */
 @media (min-width: 768px) {
-  .hero {
+  .hero-inner {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -116,6 +134,9 @@ body {
     max-width: 380px;
   }
 }
+
+/* Button Hover */
 button:hover {
   transform: scale(1.03);
+  transition: 0.2s ease;
 }
