@@ -116,3 +116,6 @@ body {
     max-width: 380px;
   }
 }
+button:hover {
+  transform: scale(1.03);
+}
