@@ -43,7 +43,7 @@ body {
   background-color: var(--cw-brown);
   color: white;
   border: none;
-  padding: 10px 18px;
+  padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -53,7 +53,14 @@ body {
   background-color: var(--cw-navy);
   padding: 60px 24px;
 }
-
+.hero {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;          
+  max-width: 1100px;              
+  margin: 0 auto;                
+  padding: 40px 20px;
+}
 .hero-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -123,7 +130,7 @@ body {
   .hero-inner {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .hero-content {
